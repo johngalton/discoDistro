@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QTabWidget>
 #include <QtDebug>
+#include <QMenuBar>
+#include <QAction>
 
 #include "gridview.h"
 #include "basicview.h"
@@ -16,6 +18,12 @@ public:
     MainWindow(QWidget *parent = 0);
     ~MainWindow();
 private:
+    QMenuBar *menuBar;
+    QMenu *fileMenu;
+    QAction *newAction;
+    QAction *saveAction;
+    QAction *loadAction;
+    QAction *exitAction;
     QTabWidget *mainTab;
     GridView *gridView;
     BasicView *basicView;
