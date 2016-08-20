@@ -3,6 +3,9 @@
 
 #include <QWidget>
 #include <QtDebug>
+#include <QComboBox>
+#include <QVBoxLayout>
+#include <QGridLayout>
 
 class GridView : public QWidget
 {
@@ -12,7 +15,9 @@ public:
     GridView(QWidget *parent = 0);
     ~GridView();
 private:
-
+    QVBoxLayout *mainLayout;
+    QGridLayout *bottomLayout;
+    QComboBox *universeSelect;
 };
 
 #endif // GRIDVIEW_H
