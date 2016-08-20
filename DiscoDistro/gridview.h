@@ -2,6 +2,7 @@
 #define GRIDVIEW_H
 
 #include <QWidget>
+#include <QtDebug>
 
 class GridView : public QWidget
 {

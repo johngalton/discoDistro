@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    gridview.cpp
+    gridview.cpp \
+    basicview.cpp
 
 HEADERS  += mainwindow.h \
-    gridview.h
+    gridview.h \
+    basicview.h
 
 DISTFILES +=

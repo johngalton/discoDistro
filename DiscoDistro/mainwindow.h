@@ -3,8 +3,10 @@
 
 #include <QMainWindow>
 #include <QTabWidget>
+#include <QtDebug>
 
 #include "gridview.h"
+#include "basicview.h"
 
 class MainWindow : public QMainWindow
 {
@@ -16,6 +18,7 @@ public:
 private:
     QTabWidget *mainTab;
     GridView *gridView;
+    BasicView *basicView;
 };
 
 #endif // MAINWINDOW_H
