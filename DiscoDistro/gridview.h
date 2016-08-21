@@ -6,6 +6,10 @@
 #include <QComboBox>
 #include <QVBoxLayout>
 #include <QGridLayout>
+#include <QListWidget>
+#include <QFrame>
+#include <QLabel>
+#include <QLineEdit>
 
 class GridView : public QWidget
 {
@@ -18,6 +22,11 @@ private:
     QVBoxLayout *mainLayout;
     QGridLayout *bottomLayout;
     QComboBox *universeSelect;
+    QListWidget *deviceList;
+    QFrame *nameFrame;
+    QFrame *propertyFrame;
+    QGridLayout *nameLayout;
+    QGridLayout *propertyLayout;
 };
 
 #endif // GRIDVIEW_H
