@@ -1,0 +1,15 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\strobecontroller.o
+./release\togglebutton.o
+./release\speedcontroller.o
+./release\colourcontroller.o
+./release\colourcontrollerrow.o
+./release\moc_mainwindow.o
+./release\moc_strobecontroller.o
+./release\moc_togglebutton.o
+./release\moc_speedcontroller.o
+./release\moc_colourcontroller.o
+./release\moc_colourcontrollerrow.o
+);

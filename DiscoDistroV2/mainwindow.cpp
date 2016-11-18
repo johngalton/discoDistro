@@ -4,6 +4,7 @@
 #include "togglebutton.h"
 #include "strobecontroller.h"
 #include "speedcontroller.h"
+#include "colourcontrollerrow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -24,15 +25,13 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowTitle("Disco Distro " + version);
 
     speedController *speedControl = new speedController(this);
-    toggleButton *tb = new toggleButton(this, "Test Button");
-    toggleButton *tb2 = new toggleButton(this, "Test Button 2", Qt::green, Qt::blue, Qt::black, Qt::white);
-    toggleButton *tb3 = new toggleButton(this, "Test Button 3");
+    colourControllerRow *row1 = new colourControllerRow(this);
+    colourControllerRow *row2 = new colourControllerRow("SMH1");
     StrobeController *sc = new StrobeController(this);
 
     mainLayout->addWidget(speedControl);
-    mainLayout->addWidget(tb);
-    mainLayout->addWidget(tb2);
-    mainLayout->addWidget(tb3);
+    mainLayout->addWidget(row1);
+    mainLayout->addWidget(row2);
     mainLayout->addWidget(sc);
 
     mainWidget->setLayout(mainLayout);

@@ -1,0 +1,15 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\strobecontroller.o
+./debug\togglebutton.o
+./debug\speedcontroller.o
+./debug\colourcontroller.o
+./debug\colourcontrollerrow.o
+./debug\moc_mainwindow.o
+./debug\moc_strobecontroller.o
+./debug\moc_togglebutton.o
+./debug\moc_speedcontroller.o
+./debug\moc_colourcontroller.o
+./debug\moc_colourcontrollerrow.o
+);

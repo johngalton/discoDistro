@@ -17,10 +17,12 @@ SOURCES += main.cpp\
     strobecontroller.cpp \
     togglebutton.cpp \
     speedcontroller.cpp \
-    colourcontroller.cpp
+    colourcontroller.cpp \
+    colourcontrollerrow.cpp
 
 HEADERS  += mainwindow.h \
     strobecontroller.h \
     togglebutton.h \
     speedcontroller.h \
-    colourcontroller.h
+    colourcontroller.h \
+    colourcontrollerrow.h
