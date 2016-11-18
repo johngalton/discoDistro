@@ -4,7 +4,7 @@
 #include "togglebutton.h"
 #include "strobecontroller.h"
 #include "speedcontroller.h"
-#include "colourcontrollerrow.h"
+#include "colourcontroller.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -20,18 +20,16 @@ MainWindow::MainWindow(QWidget *parent)
     fileMenu->addAction(exit);
     menuBar->addMenu(fileMenu);
 
-    this->setMinimumSize(800,400);
+    this->setMinimumSize(910,400);
     this->setMenuBar(menuBar);
     this->setWindowTitle("Disco Distro " + version);
 
     speedController *speedControl = new speedController(this);
-    colourControllerRow *row1 = new colourControllerRow(this);
-    colourControllerRow *row2 = new colourControllerRow("SMH1");
+    colourController *colourControl = new colourController(this, QStringList() << "Hello" << "Goodbye" << "test1" << "Test2");
     StrobeController *sc = new StrobeController(this);
 
     mainLayout->addWidget(speedControl);
-    mainLayout->addWidget(row1);
-    mainLayout->addWidget(row2);
+    mainLayout->addWidget(colourControl);
     mainLayout->addWidget(sc);
 
     mainWidget->setLayout(mainLayout);
