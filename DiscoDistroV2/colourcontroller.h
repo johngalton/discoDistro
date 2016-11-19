@@ -21,10 +21,24 @@ private:
     QWidget *scrollWidget;
     QBoxLayout *scrollLayout;
     colourControllerRow *titleRow;
-    QList<colourControllerRow> rowList;
+    QList<colourControllerRow*> *rowList;
+
+    bool checkForReds();
+    bool checkForGreens();
+    bool checkForBlues();
 signals:
 
 public slots:
+
+private slots:
+    void redValueChanged(bool);
+    void greenValueChanged(bool);
+    void blueValueChanged(bool);
+    void allValueChanged(bool);
+    void redTitleChanged(bool value);
+    void greenTitleChanged(bool value);
+    void blueTitleChanged(bool value);
+    void allTitleChanged(bool value);
 };
 
 #endif // COLOURCONTROLLER_H

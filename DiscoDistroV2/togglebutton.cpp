@@ -15,7 +15,7 @@ toggleButton::toggleButton(QWidget *, QString Text, QColor onBackgroundColour, Q
     this->label->setAutoFillBackground(true);
     this->label->setAlignment(Qt::AlignCenter);
 
-    this->setFixedSize(200,100);
+    this->setMinimumSize(200,100);
 
     this->mainLayout = new QBoxLayout(QBoxLayout::TopToBottom);
     mainLayout->addWidget(this->label);
@@ -39,4 +39,15 @@ void toggleButton::mousePressEvent(QMouseEvent *)
     updateColours();
 
     emit stateChanged(this->pressed);
+}
+
+void toggleButton::setPressed(bool value)
+{
+    this->pressed = value;
+    updateColours();
+}
+
+bool toggleButton::getPressed()
+{
+    return this->pressed;
 }

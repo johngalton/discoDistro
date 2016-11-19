@@ -10,7 +10,8 @@ class toggleButton : public QWidget
     Q_OBJECT
 public:
     explicit toggleButton(QWidget *parent = 0, QString Text = "Button", QColor onBackgroundColour = Qt::red, QColor onTextColour = Qt::white, QColor offBackgroundColour = Qt::gray, QColor offTextColour = Qt::black);
-
+    void setPressed(bool value);
+    bool getPressed(void);
 private:
     QBoxLayout *mainLayout;
     QLabel *label;
